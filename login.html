@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tela de Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #110e0e;
+      background-image: linear-gradient(to bottom, #271c5a, #232050);
+    }
+
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 100px;
+      background-color: #adbfda;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(114, 3, 3, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      width: 95%;
+      padding: 5%;
+      border-radius: 15px;
+      border: 1px solid #204472;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .form-group .forgot-password {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .form-group .create-account {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "anderson" && password === "123456") {
+        window.location.href = "loja.html";
+      } else {
+        alert("Usuário ou senha inválidos!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Tela de Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password">
+      </div>
+
+      <div class="form-group">
+        <button type="button" onclick="login()">Login</button>
+      </div>
+
+      <div class="form-group forgot-password">
+        <a href="#">Esqueceu-se do nome de usuário / senha?</a>
+      </div>
+
+      <div class="form-group create-account">
+        <p>Crie sua Conta</p>
+        <button type="button" onclick="window.location.href='criar_conta.html'">Criar Conta</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
